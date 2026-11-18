@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { OFFICIAL_PHOTOS } from '../data/initialData';
+import redLogo from '../assets/fornazari.png';
 import { Menu, ShoppingBag } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
 
@@ -10,7 +12,6 @@ export const Header: React.FC = () => {
     setIsCartOpen,
     setIsMenuOpen,
     content,
-    settings,
   } = useStore();
 
   const [scrolled, setScrolled] = useState(false);
@@ -42,25 +43,14 @@ export const Header: React.FC = () => {
           className="flex items-center gap-2.5 text-left whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#115C39] rounded-md cursor-pointer"
           aria-label="Ir para a página inicial da Fornazari"
         >
-          {content.logoUrl && !logoFailed ? (
-            <img
-              src={content.logoUrl}
-              alt="Logotipo Fornazari"
-              referrerPolicy="no-referrer"
-              onError={() => setLogoFailed(true)}
-              className="h-9 w-auto max-w-[70px] sm:max-w-[120px] object-contain"
-            />
-          ) : (
-            <span
-              className="inline-flex items-center justify-center w-9 h-9 rounded-lg text-white font-display font-extrabold text-lg"
-              style={{ backgroundColor: settings.primaryColor }}
-            >
-              F
-            </span>
-          )}
-          <span className="font-display font-extrabold text-lg sm:text-xl tracking-tight text-[#073B2B] whitespace-nowrap">
-            Fornazari
-          </span>
+          <img
+            src={content.logoUrl && content.logoUrl !== OFFICIAL_PHOTOS.logo && !logoFailed ? content.logoUrl : redLogo}
+            alt="Fornazari"
+            width="285"
+            height="50"
+            onError={() => setLogoFailed(true)}
+            className="block w-[min(48vw,220px)] h-auto max-h-11 object-contain object-left rounded"
+          />
         </button>
 
         <div className="flex items-center gap-2">
