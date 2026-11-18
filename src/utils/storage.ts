@@ -134,7 +134,15 @@ export function loadInitialData() {
     STORAGE_KEYS.products,
     INITIAL_PRODUCTS,
     isProductArray
-  );
+  ).map((product) => {
+    if (!product.isDemo || product.updatedAt !== product.createdAt ||
+        !product.brand?.startsWith('Linha Demonstração ') ||
+        !product.image?.startsWith('data:image/svg+xml')) return product;
+    const current = INITIAL_PRODUCTS.find((item) => item.id === product.id && item.sku === product.sku);
+    if (!current) return product;
+    return { ...product, name: current.name, brand: current.brand, description: current.description,
+      weightOrSize: current.weightOrSize, image: current.image, sourceUrl: current.sourceUrl };
+  });
   const services = safeReadStorage<Service[]>(
     STORAGE_KEYS.services,
     INITIAL_SERVICES,

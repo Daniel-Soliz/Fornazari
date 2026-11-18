@@ -38,6 +38,7 @@ export interface Product {
   featured: boolean;
   isDemo: boolean;
   image: string;
+  sourceUrl?: string;
   gallery?: string[];
   description: string;
   weightOrSize?: string;

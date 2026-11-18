@@ -99,7 +99,7 @@ export const StorePage: React.FC = () => {
               <strong className="text-[#073B2B]">
                 Demonstração — preços ilustrativos:
               </strong>{' '}
-              os itens sinalizados como demonstração servem para apresentação do catálogo digital. O catálogo real e os valores confirmados pela Fornazari podem ser cadastrados no painel administrativo.
+              As fotos mostram os modelos indicados. Consulte a Fornazari para confirmar preço e disponibilidade na loja.
             </div>
           </div>
         )}
@@ -240,7 +240,7 @@ export const StorePage: React.FC = () => {
                       <SmartImage
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                        className="w-full h-full object-contain bg-white p-2 transition-transform duration-300 group-hover:scale-[1.03]"
                       />
                     </div>
                     <div className="p-5 pb-3 space-y-1.5">
@@ -348,7 +348,7 @@ export const StorePage: React.FC = () => {
                   <SmartImage
                     src={activeProduct.image}
                     alt={activeProduct.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain bg-white p-2"
                   />
                 </div>
 
@@ -389,6 +389,10 @@ export const StorePage: React.FC = () => {
 
                     <p className="text-sm text-[#20322A]/80 leading-relaxed pt-1">
                       {activeProduct.description}
+                      {activeProduct.sourceUrl?.startsWith('https://www.cobasi.com.br/') && (
+                        <a className="mt-2 block text-xs underline" href={activeProduct.sourceUrl}
+                          target="_blank" rel="noopener noreferrer">Ver ficha de referência na Cobasi</a>
+                      )}
                     </p>
 
                     <div className="pt-2 text-xs text-[#20322A]/70 space-y-1">

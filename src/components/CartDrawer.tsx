@@ -227,7 +227,7 @@ export const CartDrawer: React.FC = () => {
                             <SmartImage
                               src={product.image}
                               alt={product.name}
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-contain bg-white p-2"
                             />
                           </div>
                           <div className="flex-1 min-w-0 flex flex-col justify-between">
