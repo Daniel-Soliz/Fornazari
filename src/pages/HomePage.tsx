@@ -15,42 +15,36 @@ export const HomePage: React.FC = () => {
     <div>
       {/* 4.1 HERO PRINCIPAL */}
       <section id="apresentacao" className="scroll-mt-24 relative overflow-hidden">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-4 sm:py-14">
-          <div className="relative rounded-2xl overflow-hidden bg-[#073B2B] sm:min-h-[540px] lg:min-h-[600px] sm:flex sm:items-end lg:items-center shadow-xl border border-white/10">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
+          <div className="relative rounded-2xl overflow-hidden bg-[#073B2B] md:grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:items-center shadow-xl border border-white/10">
             <motion.div
               initial={{ scale: 1.04, opacity: 0.9 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="relative overflow-hidden sm:absolute sm:inset-0"
+              className="relative overflow-hidden md:col-start-2 md:row-start-1"
             >
               <SmartImage
                 src={content.heroImageUrl}
                 alt={content.heroImageAlt}
-                className="block w-full h-auto sm:h-full sm:object-cover object-center"
+                className="block w-full h-auto brightness-[1.04]"
               />
             </motion.div>
-
-            {/* Measured contrast scrim */}
-            <div
-              aria-hidden="true"
-              className="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#073B2B]/95 via-[#073B2B]/70 to-[#073B2B]/20 lg:bg-gradient-to-r lg:from-[#073B2B]/92 lg:via-[#073B2B]/72 lg:to-transparent"
-            />
 
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="relative z-10 bg-[#073B2B] sm:bg-transparent p-4 sm:p-10 lg:p-14 max-w-2xl space-y-3 sm:space-y-5 text-white"
+              className="relative z-10 bg-[#073B2B] md:col-start-1 md:row-start-1 p-4 sm:p-7 lg:p-10 max-w-2xl space-y-3 sm:space-y-5 text-white"
             >
               <div className="text-xs sm:text-sm font-medium text-[#E9F3ED]/90 tracking-wide">
                 {settings.neighborhood} · Desde {settings.foundedYear}
               </div>
 
-              <h1 className="font-display font-extrabold text-[1.35rem] sm:text-4xl lg:text-5xl leading-[1.12] tracking-tight text-balance text-white">
+              <h1 className="font-display font-extrabold text-[1.35rem] sm:text-2xl lg:text-[2rem] leading-[1.12] tracking-tight text-balance text-white">
                 {content.heroTitle}
               </h1>
 
-              <p className="text-sm sm:text-lg text-white/85 leading-relaxed max-w-xl">
+              <p className="text-sm sm:text-base text-white/85 leading-relaxed max-w-xl">
                 {content.heroSubtitle}
               </p>
 
