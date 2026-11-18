@@ -105,11 +105,18 @@ const VALID_ROUTES: AppRoute[] = [
   '/admin',
 ];
 
+function routeUrl(route: AppRoute, tab?: ServiceTab) {
+  const params = new URLSearchParams();
+  if (route !== '/') params.set('pagina', route.slice(1));
+  if (route === '/servicos' && tab) params.set('tab', tab);
+  return import.meta.env.BASE_URL + (params.size ? '?' + params : '');
+}
+
 function parseLocation(): { route: AppRoute; tab: ServiceTab } {
   if (typeof window === 'undefined') return { route: '/', tab: 'clinica' };
-  const rawPath = window.location.pathname.replace(/\/+$/, '') || '/';
-  const route = VALID_ROUTES.includes(rawPath as AppRoute) ? (rawPath as AppRoute) : '/';
   const params = new URLSearchParams(window.location.search);
+  const rawPath = params.get('pagina') ? '/' + params.get('pagina') : window.location.pathname.replace(/\/+$/, '') || '/';
+  const route = VALID_ROUTES.includes(rawPath as AppRoute) ? (rawPath as AppRoute) : '/';
   const tabParam = params.get('tab');
   const validTabs: ServiceTab[] = ['clinica', 'especialidades', 'exames', 'banho'];
   const tab = validTabs.includes(tabParam as ServiceTab) ? (tabParam as ServiceTab) : 'clinica';
@@ -197,7 +204,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         setServiceTabState(options.tab);
       }
       setIsMenuOpen(false);
-      const url = to === '/servicos' ? `${to}?tab=${nextTab}` : to;
+      const url = routeUrl(to, nextTab);
       if (window.location.pathname + window.location.search !== url) {
         window.history.pushState({}, '', url);
       }
@@ -210,8 +217,8 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const setServiceTab = useCallback((tab: ServiceTab) => {
     setServiceTabState(tab);
-    const url = `/servicos?tab=${tab}`;
-    if (window.location.pathname === '/servicos') {
+    const url = routeUrl('/servicos', tab);
+    if (parseLocation().route === '/servicos') {
       window.history.replaceState({}, '', url);
     }
   }, []);
