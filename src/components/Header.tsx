@@ -27,6 +27,8 @@ export const Header: React.FC = () => {
     setLogoFailed(false);
   }, [content.logoUrl]);
 
+  const headerLogo = content.logoUrl && content.logoUrl !== OFFICIAL_PHOTOS.logo && !logoFailed ? content.logoUrl : redLogo;
+
   return (
     <header
       className={`sticky top-0 z-40 w-full transition-colors duration-200 border-b ${
@@ -43,8 +45,16 @@ export const Header: React.FC = () => {
           className="flex items-center gap-2.5 text-left whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#115C39] rounded-md cursor-pointer"
           aria-label="Ir para a página inicial da Fornazari"
         >
+          <svg width="0" height="0" className="absolute" aria-hidden="true">
+            <defs>
+              <filter id="fornazari-red-letters" colorInterpolationFilters="sRGB">
+                <feColorMatrix type="matrix" values="0 0 0 0 0.88  0 0 0 0 0.02  0 0 0 0 0.06  1.22 -1.22 0 0 -0.025" />
+              </filter>
+            </defs>
+          </svg>
           <img
-            src={content.logoUrl && content.logoUrl !== OFFICIAL_PHOTOS.logo && !logoFailed ? content.logoUrl : redLogo}
+            src={headerLogo}
+            style={headerLogo === redLogo ? { filter: 'url(#fornazari-red-letters)' } : undefined}
             alt="Fornazari"
             width="285"
             height="50"
