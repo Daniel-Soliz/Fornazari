@@ -117,6 +117,7 @@ export const INITIAL_SITE_CONTENT: SiteContent = {
   heroPrimaryBtnRoute: '/loja',
   heroSecondaryBtnText: 'Conhecer nossos serviços',
   heroSecondaryBtnRoute: '/servicos',
+  areasTitle: 'Loja e atendimentos',
   areaCards: [
     {
       id: 'card-loja',

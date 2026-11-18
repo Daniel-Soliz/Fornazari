@@ -167,6 +167,7 @@ export interface SiteContent {
   heroPrimaryBtnRoute: AppRoute;
   heroSecondaryBtnText: string;
   heroSecondaryBtnRoute: AppRoute;
+  areasTitle: string;
   areaCards: [HomeAreaCard, HomeAreaCard, HomeAreaCard];
   institutionalTitle: string;
   institutionalSummary: string;

@@ -259,6 +259,11 @@ export const AdminHomeEditor: React.FC = () => {
         </h3>
 
         <div className="space-y-6">
+          <label className="block text-sm font-semibold">
+            Título da seção de áreas
+            <input className="mt-2 w-full rounded-lg border p-3" value={draft.areasTitle}
+              onChange={(event) => setDraft({ ...draft, areasTitle: event.target.value })} />
+          </label>
           {draft.areaCards.map((card, idx) => {
             const updateCard = (patch: Partial<typeof card>) => {
               const nextCards = [...draft.areaCards] as SiteContent['areaCards'];

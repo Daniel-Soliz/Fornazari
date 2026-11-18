@@ -39,7 +39,7 @@ export const HomePage: React.FC = () => {
   return (
     <div>
       {/* 4.1 HERO PRINCIPAL */}
-      <section className="relative overflow-hidden bg-[#073B2B]">
+      <section id="apresentacao" className="scroll-mt-24 relative overflow-hidden bg-[#073B2B]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 sm:py-12">
           <div className="relative rounded-2xl overflow-hidden min-h-[480px] sm:min-h-[540px] lg:min-h-[600px] flex items-end lg:items-center shadow-xl border border-white/10">
             <motion.div
@@ -101,8 +101,24 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
+      <nav aria-label="Tópicos da página inicial" className="border-b border-[#115C39]/15 bg-white">
+        <div className="mx-auto flex max-w-[1280px] flex-wrap gap-x-6 gap-y-1 px-4 py-3 sm:px-6">
+          {[
+            ['areas', content.areasTitle],
+            ['historia', content.institutionalTitle],
+            ['destaques', content.featuredTitle],
+            ['contato', content.quickContactTitle],
+          ].map(([id, title]) => (
+            <a key={id} href={`#${id}`} className="py-2 text-sm font-semibold text-[#115C39] hover:underline">
+              {title}
+            </a>
+          ))}
+        </div>
+      </nav>
+
       {/* 4.2 TRÊS CARDS DE NAVEGAÇÃO */}
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <section id="areas" className="scroll-mt-24 max-w-[1280px] mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <h2 className="mb-6 font-display text-2xl font-extrabold text-[#073B2B] sm:text-3xl">{content.areasTitle}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {content.areaCards.map((card, idx) => (
             <motion.article
@@ -123,9 +139,9 @@ export const HomePage: React.FC = () => {
                   />
                 </div>
                 <div className="p-6 space-y-2">
-                  <h2 className="font-display font-bold text-xl text-[#073B2B]">
+                  <h3 className="font-display font-bold text-xl text-[#073B2B]">
                     {card.title}
-                  </h2>
+                  </h3>
                   <p className="text-sm text-[#20322A]/75 leading-relaxed">
                     {card.description}
                   </p>
@@ -148,7 +164,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 4.3 FAIXA INSTITUCIONAL */}
-      <section className="bg-[#E9F3ED]/65 border-y border-[#115C39]/12">
+      <section id="historia" className="scroll-mt-24 bg-[#E9F3ED]/65 border-y border-[#115C39]/12">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-12 sm:py-14">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
@@ -187,7 +203,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 4.4 PRODUTOS EM DESTAQUE */}
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-8">
+      <section id="destaques" className="scroll-mt-24 max-w-[1280px] mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="space-y-1.5">
             <div className="flex flex-wrap items-center gap-2 text-xs text-[#20322A]/60">
@@ -285,7 +301,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* 4.5 CONTATO RÁPIDO */}
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 pb-14">
+      <section id="contato" className="scroll-mt-24 max-w-[1280px] mx-auto px-4 sm:px-6 pb-14">
         <div className="bg-white rounded-2xl border border-[#20322A]/10 p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
             <h2 className="font-display font-bold text-xl sm:text-2xl text-[#073B2B]">
