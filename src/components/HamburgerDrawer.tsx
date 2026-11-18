@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import {
   Camera,
-  ChevronRight,
   FlaskConical,
   Home,
   Info,
@@ -19,7 +18,6 @@ import { AppRoute, ServiceTab } from '../types/fornazari';
 
 interface DrawerNavItem {
   label: string;
-  subtitle: string;
   route: AppRoute;
   tab?: ServiceTab;
   icon: React.ComponentType<{ className?: string }>;
@@ -27,61 +25,53 @@ interface DrawerNavItem {
 
 const DRAWER_LINKS: DrawerNavItem[] = [
   {
-    label: 'Sobre a Fornazari',
-    subtitle: 'História desde 1997 e equipe',
-    route: '/sobre',
-    icon: Info,
-  },
-  {
     label: 'Clínica Veterinária',
-    subtitle: 'Consultas, vacinação e cirurgias',
     route: '/servicos',
     tab: 'clinica',
     icon: Stethoscope,
   },
   {
     label: 'Especialidades',
-    subtitle: 'Áreas de atendimento veterinário',
     route: '/servicos',
     tab: 'especialidades',
     icon: Sparkles,
   },
   {
     label: 'Exames',
-    subtitle: 'Diagnóstico com agendamento',
     route: '/servicos',
     tab: 'exames',
     icon: FlaskConical,
   },
   {
     label: 'Banho e Tosa',
-    subtitle: 'Higiene, estética e horários',
     route: '/servicos',
     tab: 'banho',
     icon: Scissors,
   },
   {
+    label: 'Sobre a Fornazari',
+    route: '/sobre',
+    icon: Info,
+  },
+  {
     label: 'Galeria',
-    subtitle: 'Fotos reais das instalações',
     route: '/galeria',
     icon: Camera,
   },
   {
     label: 'Localização',
-    subtitle: 'Rua Parapuã, 747 – Itaberaba',
     route: '/contato',
     icon: MapPin,
   },
   {
     label: 'Contato',
-    subtitle: 'Telefones, WhatsApp e atendimento',
     route: '/contato',
     icon: Phone,
   },
 ];
 
 export const HamburgerDrawer: React.FC = () => {
-  const { isMenuOpen, setIsMenuOpen, navigate, settings } = useStore();
+  const { isMenuOpen, setIsMenuOpen, navigate } = useStore();
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -131,9 +121,7 @@ export const HamburgerDrawer: React.FC = () => {
                   <div className="font-display font-bold text-base text-[#073B2B]">
                     Catálogo Fornazari
                   </div>
-                  <div className="text-xs text-[#20322A]/60">
-                    {settings.neighborhood}
-                  </div>
+
                 </div>
                 <button
                   type="button"
@@ -146,7 +134,7 @@ export const HamburgerDrawer: React.FC = () => {
               </div>
 
               {/* Quick primary links for mobile */}
-              <div className="px-4 pt-4 pb-2 grid grid-cols-2 gap-2">
+              <div className="px-4 pt-3 pb-2 grid grid-cols-2 gap-2">
                 <button
                   type="button"
                   onClick={() => navigate('/')}
@@ -165,7 +153,7 @@ export const HamburgerDrawer: React.FC = () => {
                 </button>
               </div>
 
-              <nav className="p-4 space-y-1.5" aria-label="Menu completo">
+              <nav className="grid grid-cols-2 gap-2.5 px-4 pt-1 pb-4" aria-label="Menu completo">
                 {DRAWER_LINKS.map((item) => {
                   const Icon = item.icon;
                   return (
@@ -173,36 +161,18 @@ export const HamburgerDrawer: React.FC = () => {
                       key={item.label}
                       type="button"
                       onClick={() => navigate(item.route, { tab: item.tab })}
-                      className="w-full flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-white hover:bg-[#E9F3ED]/70 border border-[#20322A]/8 transition-colors text-left cursor-pointer group"
+                      className="aspect-square flex flex-col items-center justify-center gap-2 rounded-2xl w-full border border-[#DCE7DF] bg-white px-2 text-center text-sm font-semibold leading-tight text-[#073B2B] hover:bg-[#E9F3ED] focus-visible:outline-2 focus-visible:outline-[#115C39] cursor-pointer"
                     >
-                      <div className="flex items-center gap-3.5 min-w-0">
-                        <div className="w-9 h-9 rounded-lg bg-[#E9F3ED] text-[#115C39] flex items-center justify-center shrink-0">
-                          <Icon className="w-4 h-4" />
-                        </div>
-                        <div className="min-w-0">
-                          <div className="text-sm font-semibold text-[#20322A] truncate">
-                            {item.label}
-                          </div>
-                          <div className="text-xs text-[#20322A]/60 truncate">
-                            {item.subtitle}
-                          </div>
-                        </div>
-                      </div>
-                      <ChevronRight className="w-4 h-4 text-[#20322A]/35 group-hover:text-[#115C39] shrink-0" />
+                      <span className="grid place-items-center size-10 rounded-xl bg-[#E9F3ED] text-[#115C39]">
+                        <Icon className="size-5" />
+                      </span>
+                      {item.label}
                     </button>
                   );
                 })}
               </nav>
             </div>
 
-            <div className="p-5 bg-white border-t border-[#20322A]/10 space-y-2 text-xs text-[#20322A]/75">
-              <div className="font-semibold text-[#073B2B]">{settings.businessName}</div>
-              <div>{settings.address}</div>
-              <div className="font-mono-num">
-                {settings.phonePrimary} · {settings.phoneSecondary}
-              </div>
-              <div className="text-[#20322A]/55">{settings.crmv}</div>
-            </div>
           </motion.aside>
         </div>
       )}
