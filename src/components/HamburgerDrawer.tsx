@@ -41,7 +41,7 @@ const DRAWER_LINKS: DrawerNavItem[] = [
   },
   {
     label: 'Especialidades',
-    subtitle: '9 áreas clínicas especializadas',
+    subtitle: 'Áreas de atendimento veterinário',
     route: '/servicos',
     tab: 'especialidades',
     icon: Sparkles,
@@ -84,17 +84,31 @@ export const HamburgerDrawer: React.FC = () => {
   const { isMenuOpen, setIsMenuOpen, navigate, settings } = useStore();
 
   useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isMenuOpen) setIsMenuOpen(false);
+    if (!isMenuOpen) return;
+    const dialog = document.getElementById('site-catalog');
+    const buttons = dialog?.querySelectorAll<HTMLButtonElement>('button');
+    buttons?.[0]?.focus();
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') setIsMenuOpen(false);
+      if (e.key !== 'Tab' || !buttons?.length) return;
+      const first = buttons[0], last = buttons[buttons.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previous;
+      document.removeEventListener('keydown', onKeyDown);
+      document.getElementById('catalog-trigger')?.focus({ preventScroll: true });
     };
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
   }, [isMenuOpen, setIsMenuOpen]);
 
   return (
     <AnimatePresence>
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 flex justify-end" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+        <div className="fixed inset-0 z-50 flex justify-end" id="site-catalog" role="dialog" aria-modal="true" aria-label="Menu de navegação">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -115,7 +129,7 @@ export const HamburgerDrawer: React.FC = () => {
               <div className="px-6 py-5 border-b border-[#20322A]/10 flex items-center justify-between bg-white">
                 <div>
                   <div className="font-display font-bold text-base text-[#073B2B]">
-                    Navegação Fornazari
+                    Catálogo Fornazari
                   </div>
                   <div className="text-xs text-[#20322A]/60">
                     {settings.neighborhood}
@@ -132,7 +146,7 @@ export const HamburgerDrawer: React.FC = () => {
               </div>
 
               {/* Quick primary links for mobile */}
-              <div className="px-4 pt-4 pb-2 grid grid-cols-2 gap-2 sm:hidden">
+              <div className="px-4 pt-4 pb-2 grid grid-cols-2 gap-2">
                 <button
                   type="button"
                   onClick={() => navigate('/')}

@@ -47,3 +47,20 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+.pet-backdrop {
+  position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+  background: linear-gradient(116deg, #d6ece0, #f9f8ef 42%, #f4f6e9 75%, #cee4da);
+}
+.pet-scenery {
+  position: absolute; inset: -60px -22px;
+  transform: var(--scene-shift, translate(0,0));
+  background: radial-gradient(ellipse at 98% 5%, #e7cd9566, transparent 34%),
+    radial-gradient(ellipse at 4% 90%, #5ca88a44, transparent 30%);
+}
+.pet-scenery svg { position: absolute; color: #226449; opacity: .13; }
+.dog-outline { width: clamp(130px,19vw,280px); height: auto; right: -2%; top: 12%; rotate: 12deg; }
+.paw-one { width: 88px; height: 88px; left: 2%; top: 64%; rotate: -28deg; }
+.paw-two { width: 52px; height: 52px; left: 5%; top: 53%; rotate: -9deg; }
+.paw-three { width: 74px; height: 74px; right: 5%; bottom: 15%; rotate: 28deg; }
+@media (prefers-reduced-motion: reduce) { .pet-scenery { transform: none; } }

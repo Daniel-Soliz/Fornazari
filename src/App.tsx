@@ -1,4 +1,5 @@
 import React from 'react';
+import { PetBackdrop } from './components/PetBackdrop';
 import { AnimatePresence, motion, MotionConfig } from 'motion/react';
 import { StoreProvider, useStore } from './context/StoreContext';
 import { Header } from './components/Header';
@@ -31,7 +32,8 @@ const AppContent: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8F9F6] text-[#20322A]">
+    <div className="relative isolate min-h-screen flex flex-col text-[#20322A]">
+      <PetBackdrop />
       <Header />
 
       <main className="flex-1">
