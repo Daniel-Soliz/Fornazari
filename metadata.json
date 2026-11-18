@@ -1,6 +1,4 @@
 {
   "name": "Fornazari – Veterinário e Pet Shop",
-  "description": "Clínica veterinária, especialidades, exames, banho e tosa e pet shop na Zona Norte de São Paulo desde 1997.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "description": "Clínica veterinária, especialidades, exames, banho e tosa e pet shop na Zona Norte de São Paulo desde 1997."
 }

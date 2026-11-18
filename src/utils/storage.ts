@@ -1,4 +1,5 @@
 import {
+  OFFICIAL_PHOTOS,
   INITIAL_MEDIA,
   INITIAL_PRODUCTS,
   INITIAL_SERVICES,
@@ -27,6 +28,15 @@ export const STORAGE_KEYS = {
   orderSeq: 'fornazari:v1:order_seq',
 } as const;
 
+// Resolve previously saved local links to the current storefront photo.
+function resolvePhotoPath(_key: string, value: unknown): unknown {
+  if (typeof value === 'string' && value.startsWith(import.meta.env.BASE_URL + 'assets/') &&
+      value.endsWith('/Fachada_vibrante_do_Pet_Shop_Fornazari_0eab748c.png')) {
+    return OFFICIAL_PHOTOS.facadeLocal;
+  }
+  return value;
+}
+
 export function safeReadStorage<T>(
   key: string,
   fallback: T,
@@ -35,7 +45,7 @@ export function safeReadStorage<T>(
   try {
     const raw = window.localStorage.getItem(key);
     if (!raw) return fallback;
-    const parsed: unknown = JSON.parse(raw);
+    const parsed: unknown = JSON.parse(raw, key === STORAGE_KEYS.media ? resolvePhotoPath : undefined);
     if (validator && !validator(parsed)) {
       return fallback;
     }
@@ -163,7 +173,7 @@ export function loadInitialData() {
   let content = INITIAL_SITE_CONTENT;
   try {
     const rawContent = window.localStorage.getItem(STORAGE_KEYS.content);
-    if (rawContent) content = mergeSiteContent(JSON.parse(rawContent));
+    if (rawContent) content = mergeSiteContent(JSON.parse(rawContent, resolvePhotoPath));
   } catch {
     content = INITIAL_SITE_CONTENT;
   }

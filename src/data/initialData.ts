@@ -8,7 +8,7 @@ import {
 } from '../types/fornazari';
 
 export const OFFICIAL_PHOTOS = {
-  facadeLocal: import.meta.env.BASE_URL + 'assets/aistudio/Fachada_vibrante_do_Pet_Shop_Fornazari_0eab748c.png',
+  facadeLocal: import.meta.env.BASE_URL + 'assets/fachada/Fachada_vibrante_do_Pet_Shop_Fornazari_0eab748c.png',
   logo: 'https://petshopfornazari.com.br/wp-content/uploads/2017/04/cropped-g20_1-1.png',
   recepcao: 'https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/recepicao.jpg',
   consultorio: 'https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/consultorio.jpg',
