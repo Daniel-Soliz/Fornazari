@@ -1,0 +1,387 @@
+{
+  "projeto": "Fornazari 2.0",
+  "observacao": "Catálogo de links de imagens encontrados no site oficial. As fotografias externas NÃO foram baixadas nem incorporadas ao pacote; abrem via URL do site original. O uso exige permissão. Podem ser bloqueadas ou alteradas pelo servidor remoto. As duas imagens editadas estão incluídas na pasta imagens_editadas.",
+  "url_site": "https://petshopfornazari.com.br/",
+  "galeria_oficial_fotos": 30,
+  "total_urls": 63,
+  "imagens": [
+    {
+      "nome": "Galeria da clínica — foto 01",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_083732_(1).jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 02",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084128.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 03",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_083713.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 04",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084151.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 05",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084237.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 06",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084453.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 07",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084711_(1).jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 08",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084730.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 09",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084741.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 10",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084857.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 11",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084905.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 12",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084922.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 13",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084940.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 14",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_085108.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 15",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_085209.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 16",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_090430.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 17",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/fornazari-3.JPG",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 18",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/IMG_9973-1.JPG",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Galeria da clínica — foto 19",
+      "categoria": "Galeria da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/IMG_9794-2.JPG",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Recepção",
+      "categoria": "Ambientes",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/recepicao.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Consultório",
+      "categoria": "Ambientes",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/consultorio.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Centro cirúrgico",
+      "categoria": "Ambientes",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/cir-2.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Internação",
+      "categoria": "Ambientes",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/internacao-1.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Pet shop — foto 01",
+      "categoria": "Pet Shop",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/FullSizeRender2.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Pet shop — foto 02",
+      "categoria": "Pet Shop",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/FullSizeRender9.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Pet shop — foto 03",
+      "categoria": "Pet Shop",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/FullSizeRender8.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Pet shop — foto 04",
+      "categoria": "Pet Shop",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/FullSizeRender5.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Pet shop — foto 05",
+      "categoria": "Pet Shop",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/FullSizeRender.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Banho e tosa — foto 01",
+      "categoria": "Banho e Tosa",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/pet-2.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Banho e tosa — foto 02",
+      "categoria": "Banho e Tosa",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/pet-1-2.jpg",
+      "origem": "site oficial"
+    },
+    {
+      "nome": "Clínica — foto adicional 01",
+      "categoria": "Fotos adicionais da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_083732.jpg",
+      "origem": "página Clínica"
+    },
+    {
+      "nome": "Clínica — foto adicional 02",
+      "categoria": "Fotos adicionais da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_083718.jpg",
+      "origem": "página Clínica"
+    },
+    {
+      "nome": "Clínica — foto adicional 03",
+      "categoria": "Fotos adicionais da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_085851.jpg",
+      "origem": "página Clínica"
+    },
+    {
+      "nome": "Clínica — foto adicional 04",
+      "categoria": "Fotos adicionais da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084241.jpg",
+      "origem": "página Clínica"
+    },
+    {
+      "nome": "Clínica — foto adicional 05",
+      "categoria": "Fotos adicionais da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220314_084711.jpg",
+      "origem": "página Clínica"
+    },
+    {
+      "nome": "Clínica — foto adicional 06",
+      "categoria": "Fotos adicionais da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/WhatsApp-Image-2022-06-29-at-08.54.04.jpeg",
+      "origem": "página Clínica"
+    },
+    {
+      "nome": "Clínica — foto adicional 07",
+      "categoria": "Fotos adicionais da clínica",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/WhatsApp-Image-2022-06-29-at-08.50.16.jpeg",
+      "origem": "página Clínica"
+    },
+    {
+      "nome": "Pet Shop — foto adicional 01",
+      "categoria": "Fotos adicionais do Pet Shop",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220328_161914.jpg",
+      "origem": "página Pet Shop"
+    },
+    {
+      "nome": "Pet Shop — foto adicional 02",
+      "categoria": "Fotos adicionais do Pet Shop",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220328_161722.jpg",
+      "origem": "página Pet Shop"
+    },
+    {
+      "nome": "Pet Shop — foto adicional 03",
+      "categoria": "Fotos adicionais do Pet Shop",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220328_155929.jpg",
+      "origem": "página Pet Shop"
+    },
+    {
+      "nome": "Pet Shop — foto adicional 04",
+      "categoria": "Fotos adicionais do Pet Shop",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/photo-gallery/20220328_161839.jpg",
+      "origem": "página Pet Shop"
+    },
+    {
+      "nome": "Logotipo do site",
+      "categoria": "Marca e banners",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/04/cropped-g20_1-1.png",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Banner amarelo da home",
+      "categoria": "Marca e banners",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2023/06/PetShop-Fornazari-3264-%C3%97-1184-px-1-scaled.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Imagem da fachada original",
+      "categoria": "Marca e banners",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/fornazari-3.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Banner promocional da home",
+      "categoria": "Marca e banners",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2024/07/Fornazari-Post-Pet-pop-up-l-3264-x-1184-px.png",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Foto do Dr. Marcos / clínica",
+      "categoria": "Marca e banners",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2022/07/Marcos-Sala-Clinica-2048x920.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Recurso da home",
+      "categoria": "Marca e banners",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/06/Camera-Fornazari-550x500.jpeg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — agener",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/agener-1.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — bayer-logo",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/bayer-logo-1.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — Duprat-Nova-Logo-OK",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/Duprat-Nova-Logo-OK-1.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — elanco",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/elanco.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — FR-Site-logo-CEPAV",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/FR-Site-logo-CEPAV.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — konig",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/konig.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — logo_cliente_AVERT",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/logo_cliente_AVERT-1.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — Logo_Organnact_SaudeAnimal",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/Logo_Organnact_SaudeAnimal.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — logo-nutripharme",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/logo-nutripharme.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — logovetminas",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/logovetminas-1.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — logo-virbac",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/logo-virbac-1.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — merial",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/merial-1.jpeg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — Novartis-Logo",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/Novartis-Logo-1.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — vetminas",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/vetminas-1.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — zoetis",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/zoetis-1.jpg",
+      "origem": "página inicial"
+    },
+    {
+      "nome": "Logo de fornecedor — mundo-animal_logo1",
+      "categoria": "Logos presentes no site",
+      "url": "https://petshopfornazari.com.br/wp-content/uploads/2017/05/mundo-animal_logo1-1.png",
+      "origem": "página inicial"
+    }
+  ]
+}
